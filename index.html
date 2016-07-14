@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>blazy with transitions</title>
+        <style>
+            .contenedor{
+                width: 70%;
+                position: relative;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .contenedor img{                
+                width: 100%;
+                transition: 0.3s;
+                opacity: 0;
+                object-fit: cover;/*Prop que acomoda la mejor proporcion de la imagen*/
+                position: relative;
+                left: -40%;
+            }
+            img.b-loaded{
+                opacity: 1;
+                left: 0;
+            }
+            figure{
+                overflow: hidden;                
+                max-width: 500px;
+                margin: 50px auto 0;
+                background-image: url(images/ring.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+        </style>        
+    </head>
+    <body>
+        <div class="contenedor">
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="http://tortupedia.com/wp-content/uploads/2014/10/tortuga-pone-huevos.jpg" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="http://www.nuestromar.com/imagenes/noticias/2014/ABR/230414_ECTORTUGAS.jpg" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="http://tortupedia.com/wp-content/uploads/2014/11/tortuga-saliendo-del-huevo.jpg" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="http://universomarino.com/wp-content/uploads/2011/05/huevos-de-tortugas-marinas.jpg" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="http://www.corrientesloropark.com.ar/animales/ventatortugas1.jpg" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQdeDByzrmK6dXGYOIZ8jr6BdNc2Dvaj-xIMr4DDdynUr9TCwjppA" alt="tortuga">
+            </figure>
+            <figure>
+                <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN89vZZPQAItAM6CUtCKQAAAABJRU5ErkJggg==" data-src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSW9sVcnAK5Nrp4ijFJXKHEanWRFXFo5xxMips3Vqn0XgzYoCAd" alt="tortuga">
+            </figure>            
+        </div>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+        <script>
+            var blazy = new Blazy({
+                selector: 'img'
+            });
+        </script>
+    </body>    
+</html>
